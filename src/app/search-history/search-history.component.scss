@@ -1,0 +1,33 @@
+@import './../../theme.scss';
+
+.history-section {
+  padding: 0;
+  background-color: #EFF0F1;
+  color: $dark-text;
+
+  -webkit-box-shadow: 0px 10px 5px -7px rgba(0,0,0,0.34);
+  -moz-box-shadow: 0px 10px 5px -7px rgba(0,0,0,0.34);
+  box-shadow: 0px 10px 5px -7px rgba(0,0,0,0.34);
+
+  .title {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .history-container {
+    border-top: 1px solid $dark-text;
+    display: none;
+
+    .hist-item {
+      text-align: center;
+      padding-bottom: .5em;
+    }
+  }
+
+  .open + .history-container {
+    display: block;
+  }
+
+}

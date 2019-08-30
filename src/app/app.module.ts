@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GhSearchComponent } from './gh-search/gh-search.component';
+import { SearchHistoryComponent } from './search-history/search-history.component';
+import { AccordionControlDirective } from './search-history/accordion-control.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GhSearchComponent
+    GhSearchComponent,
+    SearchHistoryComponent,
+    AccordionControlDirective,
   ],
   imports: [
     BrowserModule,
