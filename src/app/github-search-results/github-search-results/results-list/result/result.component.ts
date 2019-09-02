@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { GithubUser } from '../../github-user';
 
 @Component({
   selector: 'app-result',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./result.component.scss']
 })
 export class ResultComponent implements OnInit {
+
+  @Input()
+  githubUser: GithubUser;
 
   constructor() { }
 

@@ -15,7 +15,7 @@ import { ResultComponent } from './github-search-results/results-list/result/res
   ],
   imports: [
     CommonModule,
-    GithubSearchResultsRoutingModule
+    GithubSearchResultsRoutingModule,
   ]
 })
 export class GithubSearchResultsModule { }

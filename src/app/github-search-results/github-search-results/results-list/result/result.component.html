@@ -1,1 +1,14 @@
-<p>result works!</p>
+
+<div class="github-user-card">
+  <img [src]="githubUser.avatar_url" />
+  <div class="info">
+    <h3 class="username">
+      {{ githubUser.login }}
+    </h3>
+    <a
+      [href]="githubUser.url"
+      class="go-to-profile-btn">
+      Go to Profile
+    </a>
+  </div>
+</div>

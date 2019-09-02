@@ -1,1 +1,5 @@
-<p>results-list works!</p>
+<div class="results-list-container">
+  <div class="result-container" *ngFor="let user of githubUsers">
+    <app-result [githubUser]="user"> </app-result>
+  </div>
+</div>

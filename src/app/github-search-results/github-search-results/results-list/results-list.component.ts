@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { GithubUser } from '../github-user';
 
 @Component({
   selector: 'app-results-list',
@@ -8,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ResultsListComponent implements OnInit {
 
   @Input()
-  githubUsers: any;
+  githubUsers: GithubUser[];
 
   constructor() { }
 

@@ -1,0 +1,41 @@
+@import '../../../../../theme.scss';
+@import '../../../../../mixins.scss';
+
+.github-user-card {
+  @include box-shadow;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 10px 0;
+  padding: 0;
+  border: 1px solid $light-bg;
+
+
+  img {
+    height: 150px;
+    width: auto;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    flex: 1;
+
+    .username {
+      text-align: center;
+    }
+
+    .go-to-profile-btn {
+      background-color: $header-color;
+      color: $light-text;
+      border-radius: 4px;
+      outline: none;
+      padding: .5em;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+
