@@ -1,7 +1,13 @@
 <section class="search-section">
   <h2 class="title">Github User Search</h2>
-  <input
-    type="text"
-    class="search"
-    (input)="onChangeHandler($event.target.value)"/>
+
+  <div class="input-section">
+    <input type="text" class="search"/>
+    <button
+      type="button"
+      class="btn search-btn"
+      (click)="onClickHandler($event.target.value)">
+      Search Github
+    </button>
+  </div>
 </section>
