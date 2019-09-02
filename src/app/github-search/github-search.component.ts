@@ -8,10 +8,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class GithubSearchComponent {
 
   @Output()
-  queryChanged: EventEmitter<string> = new EventEmitter();
+  querySubmitted: EventEmitter<string> = new EventEmitter();
 
-  onChangeHandler(query: string) {
-    this.queryChanged.emit(query);
+  onClickHandler(query: string) {
+    this.querySubmitted.emit(query);
   }
 
 }

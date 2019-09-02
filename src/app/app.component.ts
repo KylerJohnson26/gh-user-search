@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  onSearchQueryChanged(query: string) {
+  onSearchQuerySubmitted(query: string) {
     console.log(query);
   }
 
