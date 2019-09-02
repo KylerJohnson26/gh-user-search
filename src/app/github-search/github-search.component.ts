@@ -1,11 +1,11 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-gh-search',
-  templateUrl: './gh-search.component.html',
-  styleUrls: ['./gh-search.component.scss']
+  selector: 'app-github-search',
+  templateUrl: './github-search.component.html',
+  styleUrls: ['./github-search.component.scss']
 })
-export class GhSearchComponent {
+export class GithubSearchComponent {
 
   @Output()
   queryChanged: EventEmitter<string> = new EventEmitter();
