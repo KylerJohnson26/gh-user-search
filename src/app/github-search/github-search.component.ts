@@ -10,6 +10,8 @@ export class GithubSearchComponent {
   @Output()
   querySubmitted: EventEmitter<string> = new EventEmitter();
 
+  searchQuery: '';
+
   onClickHandler(query: string) {
     this.querySubmitted.emit(query);
   }

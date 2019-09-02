@@ -30,9 +30,12 @@
     .search-btn {
       background-color: #EFF0F1;
       border-radius: 4px;
-      height: 2em;
       margin-top: 10px;
       outline: none;
+      text-decoration: none;
+      color: $dark-text;
+      padding: .5em;
+      cursor: pointer;
     }
   }
 

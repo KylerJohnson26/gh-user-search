@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, tap, map } from 'rxjs/operators';
 import { GithubSearchService } from './github-search.service';
 import { Observable } from 'rxjs';
+import { GithubUser } from './github-user';
+import { GithubUserSearchResponse } from './github-user-search-response';
 
 @Component({
   selector: 'app-github-search-results',
@@ -11,7 +13,7 @@ import { Observable } from 'rxjs';
 })
 export class GithubSearchResultsComponent implements OnInit {
 
-  githubUsers: Observable<any>;
+  githubUsers: Observable<GithubUser[]>;
 
   constructor(
     private route: ActivatedRoute,
@@ -19,14 +21,17 @@ export class GithubSearchResultsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     this.githubUsers = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
-        const searchQuery = params.get('query');
+        const searchQuery = params.get('searchQuery');
         return this
           .searchService
           .getGithubUsers(searchQuery);
-      })
+      }),
+      map((searchResponse: GithubUserSearchResponse) => {
+        return [...searchResponse.items];
+      }),
+      tap(users => console.log(users))
     );
 
   }
