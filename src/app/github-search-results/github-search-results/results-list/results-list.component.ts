@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-results-list',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./results-list.component.scss']
 })
 export class ResultsListComponent implements OnInit {
+
+  @Input()
+  githubUsers: any;
 
   constructor() { }
 

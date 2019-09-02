@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
 import { GithubSearchService } from './github-search.service';
 import { Observable } from 'rxjs';
 
@@ -19,14 +19,16 @@ export class GithubSearchResultsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    console.log('search results')
     this.githubUsers = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
-        const searchQuery = params.get('query');
+        console.log(params)
+        const searchQuery = params.get('searchQuery');
         return this
           .searchService
           .getGithubUsers(searchQuery);
-      })
+      }),
+      tap(users => console.log(users))
     );
 
   }

@@ -2,12 +2,11 @@
   <h2 class="title">Github User Search</h2>
 
   <div class="input-section">
-    <input type="text" class="search"/>
-    <button
-      type="button"
+    <input type="text" class="search" [(ngModel)]="searchQuery"/>
+    <a
       class="btn search-btn"
-      (click)="onClickHandler($event.target.value)">
+      [routerLink]="['/users', searchQuery]">
       Search Github
-    </button>
+  </a>
   </div>
 </section>
