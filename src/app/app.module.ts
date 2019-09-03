@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { GithubSearchComponent } from './github-search/github-search.component';
 import { SearchHistoryComponent } from './search-history/search-history.component';
 import { AccordionControlDirective } from './search-history/accordion-control.directive';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,14 @@ import { AccordionControlDirective } from './search-history/accordion-control.di
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
