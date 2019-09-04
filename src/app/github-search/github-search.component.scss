@@ -21,7 +21,7 @@
 
     .search {
       width: 50%;
-      height: 2em;
+      height: 2.5em;
       margin: 0;
       outline: $header-color;
       border-radius: 4px;
@@ -38,6 +38,35 @@
       cursor: pointer;
     }
   }
+}
 
+@media only screen and (min-width: 768px) {
+  .search-section {
 
+    .input-section {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .search-btn {
+        margin: 0 0 0 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .search-section {
+    flex-direction: row;
+    align-items: center;
+
+    .title {
+      flex: 1 30%;
+      margin: 0;
+    }
+
+    .input-section {
+      flex: 1;
+    }
+  }
 }
