@@ -9,7 +9,7 @@ import { GithubSearchComponent } from './github-search/github-search.component';
 import { SearchHistoryComponent } from './search-history/search-history.component';
 import { AccordionControlDirective } from './search-history/accordion-control.directive';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
+import { RootStoreModule } from './root-store/root-store.module';
 
 @NgModule({
   declarations: [
@@ -23,13 +23,7 @@ import { reducers, metaReducers } from './reducers';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true
-      }
-    })
+    RootStoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

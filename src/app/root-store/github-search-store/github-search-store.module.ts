@@ -14,4 +14,4 @@ import { EffectsModule } from '@ngrx/effects';
   ],
   // providers: [GithubSearchEffects]
 })
-export class GithubSearchModule { }
+export class GithubSearchStoreModule { }

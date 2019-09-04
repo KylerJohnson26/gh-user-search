@@ -12,8 +12,4 @@ export class GithubSearchComponent {
 
   searchQuery: '';
 
-  onClickHandler(query: string) {
-    this.querySubmitted.emit(query);
-  }
-
 }
