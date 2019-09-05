@@ -12,9 +12,6 @@ export class GithubSearchComponent {
     private router: Router
   ) {}
 
-  @Output()
-  querySubmitted: EventEmitter<string> = new EventEmitter();
-
   searchQuery: '';
 
   handleOnKeyupEnter() {
