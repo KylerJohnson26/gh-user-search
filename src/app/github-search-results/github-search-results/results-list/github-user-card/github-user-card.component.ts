@@ -3,8 +3,8 @@ import { GithubUser } from '../../github-user';
 
 @Component({
   selector: 'app-github-user-card',
-  templateUrl: './result.component.html',
-  styleUrls: ['./result.component.scss']
+  templateUrl: './github-user-card.component.html',
+  styleUrls: ['./github-user-card.component.scss']
 })
 export class GithubUserCardComponent {
 
