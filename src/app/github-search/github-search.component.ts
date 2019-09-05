@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-github-search',
@@ -7,13 +8,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class GithubSearchComponent {
 
-  @Output()
-  querySubmitted: EventEmitter<string> = new EventEmitter();
+  constructor(
+    private router: Router
+  ) {}
 
   searchQuery: '';
 
-  onClickHandler(query: string) {
-    this.querySubmitted.emit(query);
+  handleOnKeyupEnter() {
+    this.router.navigate(['/users', this.searchQuery]);
   }
 
 }

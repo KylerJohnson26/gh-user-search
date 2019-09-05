@@ -2,7 +2,10 @@
   <h2 class="title">Github User Search</h2>
 
   <div class="input-section">
-    <input type="text" class="search" [(ngModel)]="searchQuery"/>
+    <input
+      type="text" class="search" [(ngModel)]="searchQuery"
+      (keyup.enter)="handleOnKeyupEnter()"
+    />
     <a
       class="btn search-btn"
       [routerLink]="['/users', searchQuery]">
