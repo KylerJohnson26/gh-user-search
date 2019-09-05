@@ -6,7 +6,7 @@
       {{ githubUser.login }}
     </h3>
     <a
-      [href]="githubUser.url"
+      [href]="'https://github.com/' + githubUser.login"
       class="go-to-profile-btn">
       Go to Profile
     </a>
