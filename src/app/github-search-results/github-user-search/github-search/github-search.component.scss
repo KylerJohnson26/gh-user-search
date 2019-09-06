@@ -28,6 +28,7 @@
       outline: $header-color;
       border-radius: 4px;
       text-align: center;
+      font-size: 18px;
     }
 
     .search-btn {
@@ -37,8 +38,9 @@
       outline: none;
       text-decoration: none;
       color: $dark-text;
-      padding: .5em;
+      padding: .75em;
       cursor: pointer;
+      font-size: 18px;
     }
   }
 }
