@@ -1,7 +1,7 @@
 <div class="results-list-wrapper" *ngIf="githubUsers$ | async as users">
   <div class="count">Results: <span>{{ users.length }}</span></div>
   <app-results-list
-    [githubUsers]="githubUsers$ | async | paginate: { itemsPerPage: 12, currentPage: p }"
+    [githubUsers]="users | paginate: { itemsPerPage: 12, currentPage: p }"
   ></app-results-list>
   <div class="pagination-controls">
     <pagination-controls (pageChange)="p = $event"></pagination-controls>

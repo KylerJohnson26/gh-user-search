@@ -15,6 +15,8 @@ export class GithubSearchResultsComponent implements OnInit {
 
   githubUsers$: Observable<GithubUser[]>;
 
+  p = 1; // current page
+
   constructor(
     private route: ActivatedRoute,
     private searchService: GithubSearchService
