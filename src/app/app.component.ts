@@ -7,8 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  onSearchQuerySubmitted(query: string) {
-    console.log(query);
-  }
 
 }

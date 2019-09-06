@@ -33,8 +33,7 @@ export class AuthService {
       .then((result) => {
         token = (result as any).credential.accessToken;
       });
-    console.log(token);
-    return of(token);
+    return token;
   }
 
 

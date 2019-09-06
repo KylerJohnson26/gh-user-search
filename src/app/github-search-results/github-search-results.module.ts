@@ -10,6 +10,7 @@ import { GithubSearchComponent } from './github-user-search/github-search/github
 import { GithubUserCardComponent } from './github-user-search/github-search-results/results-list/github-user-card/github-user-card.component';
 import { SearchHomeComponent } from './github-user-search/search-home/search-home.component';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     GithubSearchResultsRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ]
 })
 export class GithubSearchResultsModule { }

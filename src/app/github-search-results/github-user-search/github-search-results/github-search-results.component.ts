@@ -27,8 +27,7 @@ export class GithubSearchResultsComponent implements OnInit {
         return this
           .searchService
           .getGithubUsers(searchQuery);
-      }),
-      tap(users => console.log(users))
+      })
     );
   }
 

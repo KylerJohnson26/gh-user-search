@@ -21,14 +21,8 @@ export class GithubSearchService {
 
   getGithubUsers(query: string): Observable<GithubUser[]> {
     const url = `${this.searchUsersUrl}?q=${query}`;
-    const headers = new HttpHeaders();
-    return this.authService.getAccessToken().pipe(
-      switchMap(token => {
-        headers.set('Authorization', token);
-        return this.http.get<GithubUserSearchResponse>(url).pipe(
-          map(searchReponse => searchReponse.items)
-        );
-      }),
+    return this.http.get<GithubUserSearchResponse>(url).pipe(
+      map(searchReponse => searchReponse.items)
     );
   }
 
