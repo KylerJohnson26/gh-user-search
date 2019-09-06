@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GithubSearchResultsComponent } from './github-search-results/github-search-results.component';
+import { GithubSearchResultsComponent } from './github-user-search/github-search-results/github-search-results.component';
+import { GithubUserSearchComponent } from './github-user-search/github-user-search.component';
+import { SearchHomeComponent } from './github-user-search/search-home/search-home.component';
 
 
 const routes: Routes = [
-  { path: ':searchQuery', component: GithubSearchResultsComponent },
+  {
+    path: '',
+    component: GithubUserSearchComponent,
+    children: [
+      { path: 'users/:searchQuery', component: GithubSearchResultsComponent },
+      { path: 'home', component: SearchHomeComponent },
+    ]
+  }
 ];
 
 @NgModule({
