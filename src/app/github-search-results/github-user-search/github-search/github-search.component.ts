@@ -15,7 +15,7 @@ export class GithubSearchComponent {
   searchQuery: '';
 
   handleOnKeyupEnter() {
-    this.router.navigate(['/users', this.searchQuery]);
+    this.router.navigate(['/search/users', this.searchQuery]);
   }
 
 }

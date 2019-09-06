@@ -1,0 +1,41 @@
+@import '../../../../theme.scss';
+
+.landing-page-wrapper {
+  height: 100%;
+  background: url('../../../../assets/img/avatar-2191932_1280.png') no-repeat fixed center;
+  background-size: cover;
+  padding: 2em;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $header-color;
+    opacity: .85;
+  }
+
+  .welcome {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      color: $header-color;
+    }
+
+    .github-login {
+      font-size: 2em;
+      padding: .5em;
+      outline: none;
+      background-color: $header-color;
+      color: white;
+      border-radius: 4px;
+    }
+  }
+}

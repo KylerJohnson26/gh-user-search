@@ -1,6 +1,8 @@
-@import './../../theme.scss';
+@import '../../../../theme.scss';
+@import '../../../../mixins.scss';
 
 .search-section {
+  @include box-shadow;
   background-color: $header-color;
   color: white;
   display: flex;

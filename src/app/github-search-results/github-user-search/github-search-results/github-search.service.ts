@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../../environments/environment';
 import { GithubUserSearchResponse } from './github-user-search-response';
 import { GithubUser } from './github-user';
 import { map } from 'rxjs/operators';

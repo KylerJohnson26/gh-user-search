@@ -8,17 +8,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GithubSearchComponent } from './github-search/github-search.component';
-import { SearchHistoryComponent } from './search-history/search-history.component';
-import { AccordionControlDirective } from './search-history/accordion-control.directive';
+import { GithubSearchComponent } from './github-search-results/github-user-search/github-search/github-search.component';
 import { environment } from 'src/environments/environment';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GithubSearchComponent,
-    SearchHistoryComponent,
-    AccordionControlDirective,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -27,7 +23,8 @@ import { environment } from 'src/environments/environment';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

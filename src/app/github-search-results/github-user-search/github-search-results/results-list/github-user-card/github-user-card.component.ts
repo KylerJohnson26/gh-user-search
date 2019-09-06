@@ -22,7 +22,6 @@ export class GithubUserCardComponent implements OnInit{
   ) {}
 
   ngOnInit() {
-    console.log(this.githubUser)
     this.githubUserDetail$ = this
       .getGithubUserDetail(this.githubUser).pipe(
         tap(detail => console.log(detail))
