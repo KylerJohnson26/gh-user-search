@@ -1,0 +1,25 @@
+@import '../../../../theme.scss';
+
+.pagination-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+.count {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em;
+  font-size: 18px;
+
+  span {
+    background-color: $header-color;
+    padding: .5em;
+    border-radius: 25%;
+    color: white;
+    margin-left: .5em;
+  }
+}

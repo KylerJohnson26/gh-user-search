@@ -15,6 +15,8 @@ export class GithubSearchResultsComponent implements OnInit {
 
   githubUsers$: Observable<GithubUser[]>;
 
+  p = 1; // current page
+
   constructor(
     private route: ActivatedRoute,
     private searchService: GithubSearchService
@@ -27,8 +29,7 @@ export class GithubSearchResultsComponent implements OnInit {
         return this
           .searchService
           .getGithubUsers(searchQuery);
-      }),
-      tap(users => console.log(users))
+      })
     );
   }
 

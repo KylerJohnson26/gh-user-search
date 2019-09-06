@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment';
 import { GithubUserSearchResponse } from './github-user-search-response';
 import { GithubUser } from './github-user';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { GithubUserDetail } from './github-user-detail';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,8 @@ export class GithubSearchService {
   private searchUsersUrl = `${environment.githubApiUrl}/search/users`;
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private authService: AuthService
   ) { }
 
   getGithubUsers(query: string): Observable<GithubUser[]> {
